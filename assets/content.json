@@ -1,0 +1,58 @@
+{
+  "firstSection": {
+    "title": "Robert Jenssen",
+    "subTitle": "Webbutvecklare / Konsult",
+    "startText": "Robert heter jag och jobbar som Webbutvecklare i Borås. Jag brinner för programmering och har nyligen startat min egna firma Robert Jenssen Webbkonsult så jag kan utöva min hobby på kvällar och helger.",
+    "endText": "Är ni en webbyrå som har mycket att göra och behöver hjälp eller är ni ett e-handels företag med en långsam hemsida tveka inte att höra av er, jag kan hjälpa er.",
+    "buttonsText": "Skicka gärna ett mejl eller använd formuläret längre ner",
+    "buttons": {
+      "email": {
+        "icon": ["far", "envelope"],
+        "link": "mailto:robert@jenssen.me"
+      },
+      "github": {
+        "icon": ["fab", "github"],
+        "link": "https://github.com/Jenssen"
+      }
+    }
+  },
+  "secondSection": {
+    "title": "En del av den expertis jag kan erbjuda",
+    "cards": {
+      "vue": {
+        "name": "Vue",
+        "img": "/images/vue.svg",
+        "bullets": [
+          "SaaS med Vue & Nuxt.js",
+          "Headless Wordpress med Vue som frontend",
+          "Mobilapp till både iPhone & Android med Vue Native",
+          "Progressive Web App",
+          "Desktop apps med Vue & Electron"
+        ]
+      },
+      "woocommerce": {
+        "name": "WooCommerce",
+        "img": "/images/woocommerce.svg",
+        "bullets": [
+          "Ökad konvertering genom optimering och felsökning",
+          "Underhåll / Uppdateringar för både hemsida och server",
+          "API koppling till PIM & ERP eller annan tjänst",
+          "Uppsättnig av VPS hos DigitalOcean för snabbast möjliga hosting"
+        ]
+      },
+      "wordpress": {
+        "name": "WordPress",
+        "img": "/images/wordpress.svg",
+        "bullets": [
+          "Utveckling av skräddarsydda WordPress plugins",
+          "Uppsättnig av VPS hos DigitalOcean för snabbast möjliga hosting",
+          "Uppdateringar / Underhåll för både server och hemsida",
+          "Konfiguration av plugins / tjänster som t.ex. MailChimp"
+        ]
+      }
+    }
+  },
+  "contactSection": {
+    "title": "Kontakta mig"
+  }
+}

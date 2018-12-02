@@ -1,66 +1,65 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        webbkonsult-hemsida
-      </h1>
-      <h2 class="subtitle">
-        My pioneering Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+  <div class="content">
+    <FirstSection/>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import FirstSection from '~/components/sections/FirstSection.vue'
 
 export default {
   components: {
-    Logo
+    FirstSection
   }
 }
 </script>
 
 <style>
-
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+div p {
+  margin-bottom: 20px;
+}
+.content {
+  font-family: 'Roboto', sans-serif;
+  color: white;
   text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+}
+.section {
+  margin-bottom: 100px;
+}
+.big-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  margin-bottom: 5px;
+}
+.sub-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.button-container a {
+  color: white;
+  margin: 10px;
+  transition: all .2s ease-in-out;
+}
+.button-container a:hover svg {
+  transform: scale(1.2);
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+/* Responsive */
+@media (max-width: 800px) {
+  .content {
+    margin-top: 5vh;
+  }
+  .section {
+    margin-bottom: 50px;
+  }
 }
+@media (max-width: 450px) {
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>

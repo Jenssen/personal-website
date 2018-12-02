@@ -8,14 +8,9 @@
       <div v-if="success">
         <p>Skickat!</p>
       </div>
-      <div v-if="errors.length">
-        <p>
-          <b>Vänligen korrigera följande fel:</b>
-          <ul>
-            <li
-              v-for="(error, key) in errors"
-              :key="key">{{ error }}</li>
-          </ul>
+      <div v-if="error">
+        <p class="error-message">
+          {{ error }}
         </p>
       </div>
       <div class="field">
@@ -35,6 +30,12 @@
           name="message"
           required/>
       </div>
+      <vue-recaptcha
+        :sitekey="sitekey"
+        theme="dark"
+        class="recaptcha-container"
+        @verify="onVerify"
+        @expired="onExpired"/>
       <button type="submit">Skicka</button>
     </form>
   </div>
@@ -42,13 +43,19 @@
 
 <script>
 import TextContent from '~/assets/content.json'
+import VueRecaptcha from 'vue-recaptcha'
 
 export default {
   name: 'ContactSection',
+  components: {
+    VueRecaptcha
+  },
   data() {
     return  {
+      sitekey: '6LdqR34UAAAAAEWjckvJuJxEc6MpJiA24EHUNDhP',
       title: TextContent.contactSection.title,
-      errors: [],
+      error: null,
+      recaptcha: false,
       email: null,
       message: null,
       success: null
@@ -56,9 +63,19 @@ export default {
   },
   methods: {
     checkForm: function () {
-      this.success = true
-      this.title = 'Tack för ditt mejl!'
-      return true;
+      if (this.recaptcha) {
+        this.success = true
+        this.title = 'Tack för ditt mejl!'
+        return true;
+      } else {
+        this.error = 'Vänligen bekräfta att du inte är en bot'
+      }
+    },
+    onVerify: function (response) {
+      this.recaptcha = true
+    },
+    onExpired: function () {
+      this.recaptcha = false
     }
   }
 }
@@ -106,6 +123,15 @@ export default {
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+}
+
+.error-message {
+  color: #cc0000;
+}
+
+.recaptcha-container > div {
+  width: auto !important;
+  margin-bottom: 10px;
 }
 
 /* Responsive */

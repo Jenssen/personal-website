@@ -23,11 +23,11 @@
         "name": "Vue",
         "img": "/images/vue.svg",
         "bullets": [
-          "SaaS med Nuxt.js",
           "Headless Wordpress med Vue som frontend",
+          "SaaS med Nuxt.js",
           "Mobilapp till både iPhone & Android med Vue Native",
           "Progressive Web App",
-          "Desktop apps med Vue & Electron"
+          "Desktop app med Vue & Electron"
         ]
       },
       "woocommerce": {
@@ -35,8 +35,8 @@
         "img": "/images/woocommerce.svg",
         "bullets": [
           "Ökad konvertering genom optimering och felsökning",
-          "Underhåll / Uppdateringar för både hemsida och server",
           "API koppling till PIM & ERP eller annan tjänst",
+          "Underhåll / Uppdateringar för både hemsida och server",
           "Uppsättnig av VPS hos DigitalOcean för snabbast möjliga hosting"
         ]
       },

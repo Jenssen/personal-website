@@ -1,4 +1,5 @@
 const pkg = require('./package')
+require('dotenv').config()
 
 module.exports = {
   mode: 'universal',
@@ -38,6 +39,10 @@ module.exports = {
   */
   plugins: [
     '~/plugins/fontawesome.js'
+  ],
+
+  serverMiddleware: [
+    { path: '/api/contact', handler: '~/api/contact' }
   ],
 
   /*

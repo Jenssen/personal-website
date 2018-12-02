@@ -44,6 +44,7 @@
 <script>
 import TextContent from '~/assets/content.json'
 import VueRecaptcha from 'vue-recaptcha'
+import axios from 'axios'
 
 export default {
   name: 'ContactSection',
@@ -56,6 +57,7 @@ export default {
       title: TextContent.contactSection.title,
       error: null,
       recaptcha: false,
+      recaptchaResponse: null,
       email: null,
       message: null,
       success: null
@@ -64,6 +66,15 @@ export default {
   methods: {
     checkForm: function () {
       if (this.recaptcha) {
+        axios({
+          method: 'post',
+          url: '/api/contact',
+          data: {
+            email: this.email,
+            message: this.message,
+            validate: this.recaptchaResponse
+          }
+        })
         this.success = true
         this.title = 'Tack för ditt mejl!'
         return true;
@@ -73,6 +84,7 @@ export default {
     },
     onVerify: function (response) {
       this.recaptcha = true
+      this.recaptchaResponse = response
     },
     onExpired: function () {
       this.recaptcha = false

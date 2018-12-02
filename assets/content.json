@@ -23,7 +23,7 @@
         "name": "Vue",
         "img": "/images/vue.svg",
         "bullets": [
-          "SaaS med Vue & Nuxt.js",
+          "SaaS med Nuxt.js",
           "Headless Wordpress med Vue som frontend",
           "Mobilapp till både iPhone & Android med Vue Native",
           "Progressive Web App",

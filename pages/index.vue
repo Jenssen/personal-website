@@ -2,17 +2,20 @@
   <div class="content">
     <FirstSection/>
     <SecondSection/>
+    <ContactSection/>
   </div>
 </template>
 
 <script>
 import FirstSection from '~/components/sections/FirstSection.vue'
 import SecondSection from '~/components/sections/SecondSection.vue'
+import ContactSection from '~/components/sections/ContactSection.vue'
 
 export default {
   components: {
     FirstSection,
-    SecondSection
+    SecondSection,
+    ContactSection
   }
 }
 </script>

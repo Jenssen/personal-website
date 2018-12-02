@@ -69,7 +69,9 @@ export default {
 .button-container a:hover svg {
   transform: scale(1.2);
 }
-.button-container a svg { font-size: 2.5em; }
+.button-container a svg {
+  font-size: 2.5em;
+}
 
 /* Responsive */
 @media (max-width: 800px) {

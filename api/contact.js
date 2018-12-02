@@ -1,7 +1,17 @@
 const axios = require('axios');
+const nodemailer = require('nodemailer');
+
+let smtpConfig = {
+  host: process.env.SMTP_SERVER,
+  port: process.env.SMTP_SERVER_PORT,
+  secure: false, // upgrade later with STARTTLS
+  auth: {
+      user: process.env.USERNAME_EMAIL,
+      pass: process.env.PASSWORD_EMAIL
+  }
+}
 
 export default function (req, res, next) {
-    // req is the Node.js http request object
     if (req.method == 'POST') {
       const client_response = req.body
       const secretkey = process.env.G_SECRET_KEY
@@ -18,22 +28,24 @@ export default function (req, res, next) {
       .then(function (response) {
         if (response.data.success == true) {
           sendMail(client_response)
-        } else {
-          // Something went wrong.
         }
-      })
-      .catch(function (error) {
-        // Something went wrong when verifying recapatcha
       })
 
       res.send('OK')
     }
-    // res is the Node.js http response object
-
-    // next is a function to call to invoke the next middleware
-    // Don't forget to call next at the end if your middleware is not an endpoint!
 }
 
 function sendMail(client_response) {
   // Use Nodemailer to send email from here.
+  let transporter = nodemailer.createTransport(smtpConfig)
+
+  let message = {
+    from: process.env.USERNAME_EMAIL,
+    to: process.env.EMAIL_SEND_TO,
+    subject: 'Kontaktformulär robertjenssen.se',
+    text: client_response.message,
+    replyTo: client_response.email
+  }
+
+  transporter.sendMail(message)
 }

@@ -14,7 +14,7 @@
         </p>
       </div>
       <div class="field">
-        <label>E-post</label>
+        <label for="email">E-post</label>
         <input
           id="email"
           v-model="email"
@@ -23,7 +23,7 @@
           required>
       </div>
       <div class="field">
-        <label>Meddelande</label>
+        <label for="message">Meddelande</label>
         <textarea
           id="message"
           v-model="message"

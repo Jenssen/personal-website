@@ -8,6 +8,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'sv',
+    },
     title: 'Robert Jenssen | Webbutvecklare / Konsult',
     meta: [
       { charset: 'utf-8' },

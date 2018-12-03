@@ -10,7 +10,9 @@
         <a
           :href="button.link"
           :key="key"
-          target="_blank">
+          :aria-label="button.name"
+          target="_blank"
+          rel="noopener">
           <font-awesome-icon :icon="button.icon"/>
         </a>
       </template>

@@ -9,7 +9,8 @@
         <div class="card-header">
           <img
             :src="card.img"
-            height="40px">
+            height="40px"
+            alt="">
           <p class="sub-heading">{{ card.name }}</p>
         </div>
         <div class="card-body">

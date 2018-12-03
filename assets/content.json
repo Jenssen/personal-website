@@ -7,10 +7,12 @@
     "buttonsText": "Skicka gärna ett mejl eller använd formuläret längre ner",
     "buttons": {
       "email": {
+        "name": "Email",
         "icon": ["far", "envelope"],
         "link": "mailto:robert@jenssen.me"
       },
       "github": {
+        "name": "Github",
         "icon": ["fab", "github"],
         "link": "https://github.com/Jenssen"
       }

@@ -2,8 +2,8 @@
   "firstSection": {
     "title": "Robert Jenssen",
     "subTitle": "Webbutvecklare / Konsult",
-    "startText": "Robert heter jag och jobbar som Webbutvecklare i Borås. Jag brinner för programmering och har nyligen startat min egna firma Robert Jenssen Webbkonsult så jag kan utöva min hobby på kvällar och helger.",
-    "endText": "Är ni en webbyrå som har mycket att göra och behöver hjälp eller är ni ett e-handels företag med en långsam hemsida tveka inte att höra av er, jag kan hjälpa er.",
+    "startText": "Robert heter jag och jobbar som Webbutvecklare i Borås. Jag brinner för programmering och har nyligen startat min egna firma \"Robert Jenssen Webbkonsult\" så jag kan utöva min hobby på kvällar och helger.",
+    "endText": "Är ni en webbyrå som har mycket att göra och behöver hjälp eller är ni en e-handel med en problemfylld hemsida tveka inte att höra av er, jag kan hjälpa till.",
     "buttonsText": "Skicka gärna ett mejl eller använd formuläret längre ner",
     "buttons": {
       "email": {
@@ -27,15 +27,17 @@
           "SaaS med Nuxt.js",
           "Mobilapp till både iPhone & Android med Vue Native",
           "Progressive Web App",
-          "Desktop app med Vue & Electron"
+          "Desktop app med Vue & Electron",
+          "SPA med Nuxt.js"
         ]
       },
       "woocommerce": {
         "name": "WooCommerce",
         "img": "/images/woocommerce.svg",
         "bullets": [
-          "Ökad konvertering genom optimering och felsökning",
-          "API koppling till PIM & ERP eller annan tjänst",
+          "Ökad konvertering via optimering och felsökning",
+          "API koppling till PIM & ERP",
+          "Specialbyggda plugins för ert unika behov",
           "Underhåll / Uppdateringar för både hemsida och server",
           "Uppsättnig av VPS hos DigitalOcean för snabbast möjliga hosting"
         ]
@@ -45,6 +47,7 @@
         "img": "/images/wordpress.svg",
         "bullets": [
           "Utveckling av skräddarsydda WordPress plugins",
+          "Specialanpassningar till befintligt tema",
           "Uppsättnig av VPS hos DigitalOcean för snabbast möjliga hosting",
           "Uppdateringar / Underhåll för både server och hemsida",
           "Konfiguration av plugins / tjänster som t.ex. MailChimp"
